@@ -46,6 +46,7 @@ const FallingImage: React.FC<FallingImageProps> = ({ id, x, removeImage }) => {
         left: x,
         transform: rotate.to((r) => `rotate(${r}deg)`),
         opacity: opacity.to((o) => o),
+        zIndex: '999'
       }}
     />
   );
