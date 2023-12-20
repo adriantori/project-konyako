@@ -12,6 +12,7 @@ const imageSources = [
   './assets/thumb2.png',
   './assets/thumb3.png',
   './assets/thumb4.png',
+  './assets/thumb5.jpg',
   // Add more image URLs as needed
 ];
 
