@@ -70,7 +70,7 @@ const App: React.FC = () => {
                   天流にゃこと一緒に<br />魔法のような海の世界に飛び込みましょう！
                 </Typography>
                 <Button variant="contained" color="success" onClick={handleButtonClick}>
-                  <b>バッカルコーーーーン!</b>
+                  <b>Let's Go ばっかるこーん！！</b>
                 </Button>
                 {images.map(({ id, x }) => (
                   <FallingImage key={id} id={id} x={x} removeImage={removeImage} />
