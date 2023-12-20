@@ -7,11 +7,18 @@ import './App.css';
 import FallingImage from './components/FallingImage'; // Adjust the path based on your project structure
 import Footer from './components/Footer'; // Add this line
 
+const imageSources = [
+  './assets/thumb1.png',
+  './assets/thumb2.png',
+  './assets/thumb3.png',
+  './assets/thumb4.png',
+  // Add more image URLs as needed
+];
 
-const CarouselContent = () => (
+const CarouselContent = ({ src }: { src: string }) => (
   <img
-    src="https://via.placeholder.com/300" // Replace with the path to your image
-    alt="Carousel Image"
+    src={src}
+    alt="Thumbnail Image"
     style={{ width: '100%', borderRadius: '10px' }}
   />
 );
@@ -27,9 +34,9 @@ const LeftCarousel = () => {
 
   return (
     <Slider {...carouselSettings}>
-      <CarouselContent />
-      <CarouselContent />
-      {/* Add more CarouselContent components as needed */}
+      {imageSources.map((src, index) => (
+        <CarouselContent key={index} src={src} />
+      ))}
     </Slider>
   );
 };
